@@ -1,0 +1,436 @@
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #ffffff;
+  --text:      #1a1a1a;
+  --muted:     #555;
+  --accent:    #3a6b5a;
+  --border:    #e0ddd8;
+  --max-w:     760px;
+  --font-body: Georgia, 'Times New Roman', serif;
+  --font-ui:   -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* ── Nav ───────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3.6rem;
+  padding: 0.75rem 1.5rem;
+}
+
+nav a {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ── Shared layout ─────────────────────────────────────── */
+section {
+  padding: 5rem 1.5rem;
+}
+
+.inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+h2.section-title {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2.5rem;
+}
+
+/* ── Section dividers — short centered rule ────────────── */
+#hero, #about, #research, #cv, #personal {
+  position: relative;
+}
+
+#hero::after, #about::after, #research::after, #cv::after, #personal::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── Hero ──────────────────────────────────────────────── */
+#hero {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+}
+
+.hero-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 32%;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text .tagline {
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ── About ─────────────────────────────────────────────── */
+#about {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-text {
+  column-count: 2;
+  column-gap: 2.8rem;
+  font-size: 0.93rem;
+  line-height: 1.72;
+}
+
+.about-text p {
+  margin-bottom: 1.05rem;
+  color: var(--text);
+  break-inside: avoid;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-text a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.about-text a:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 720px) {
+  .about-text {
+    column-count: 1;
+  }
+}
+
+/* ── Research ──────────────────────────────────────────── */
+#research {
+}
+
+/* Opening statement — blockquote accent */
+.research-intro {
+  font-size: 1rem;
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.82;
+  margin-bottom: 4.5rem;
+  border-left: 2px solid var(--accent);
+  padding-left: 1.5rem;
+}
+
+/* Project block */
+.research-project {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+
+.research-project:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Number + title row */
+.project-header {
+  display: flex;
+  gap: 1.6rem;
+  align-items: flex-start;
+  margin-bottom: 1.8rem;
+}
+
+.project-num {
+  font-family: var(--font-ui);
+  font-size: 3rem;
+  font-weight: 200;
+  color: #ccc8c2;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+.project-title-block {
+  flex: 1;
+}
+
+.research-project h3 {
+  font-size: 1.04rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+/* Method tags — dot-separated text with label */
+.method-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 0.15rem;
+  align-items: baseline;
+}
+
+.method-tags::before {
+  content: 'Methods\00a0\00a0';
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.55;
+  flex-shrink: 0;
+}
+
+.method-tag {
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.method-tag::after {
+  content: '\00a0·\00a0';
+  color: #c8c4be;
+}
+
+.method-tag:last-child::after {
+  content: '';
+}
+
+.research-body {
+  font-size: 0.94rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+/* Figure caption */
+.fig-label {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.65rem;
+  letter-spacing: 0.03em;
+}
+
+/* Study 1  */
+.research-figure--portrait {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.research-figure--portrait img {
+  max-height: 480px;
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+}
+
+/* Study 2  */
+.research-figure--landscape {
+  max-width: 760px;
+  margin: 2rem auto;
+}
+
+.research-figure--landscape img {
+  width: 100%;
+  display: block;
+}
+
+/* study2  inline */
+.research-figure--landscape .fig-composite {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.research-figure--landscape .fig-composite img.fig-base {
+  width: 100%;
+  display: block;
+}
+
+.research-figure--landscape .fig-composite img.fig-gif {
+  position: absolute;
+  height: auto;
+}
+
+.citation {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 1.5rem;
+}
+
+.citation em {
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* ── CV ────────────────────────────────────────────────── */
+#cv {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+}
+
+.cv-btn {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--accent);
+  padding: 0.75rem 2.2rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.cv-btn:hover {
+  opacity: 0.85;
+}
+
+/* ── Personal ──────────────────────────────────────────── */
+#personal {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.personal-photos {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+  height: 280px;
+}
+
+.personal-photos img {
+  height: 100%;
+  width: auto;
+  display: block;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.personal-text p {
+  font-size: 0.97rem;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+}
+
+.personal-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Footer ────────────────────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .personal-photos {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    gap: 1.2rem;
+  }
+}

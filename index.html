@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jieyun Li</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────── -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#personal">Personal</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Hero ───────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-inner">
+      <img class="hero-photo" src="materials/headshot.jpg" alt="Jieyun Li" />
+      <div class="hero-text">
+        <h1>Jieyun (Jerrine) Li</h1>
+        <p class="tagline">The mind's most powerful tools are also its most stubborn ones.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ──────────────────────────────────────── -->
+  <section id="about">
+    <div class="inner">
+      <h2 class="section-title">About</h2>
+      <div class="about-text">
+        <p>When I was little, someone told me that the moon on the horizon is actually the same size as the moon high in the sky. I stared at it for a long time, trying to see it differently, and I couldn't. I completely believe them, but no matter how hard I tried, my eyes just wouldn't cooperate. That feeling stuck with me for a long time.</p>
+
+        <p>Studying psychology didn't resolve it so much as deepen it. I started to realize that the moon story was pointing at something larger: the human mind is efficient and, sometimes for that reason, is stubborn. Do the tools we rely on to make sense of the world (like drawing inferences, compressing information, and finding patterns) also leave traces in places we don't expect?</p>
+
+        <p>An early puzzle of mine came from social impression: how do we form an impression of a group from a flood of diverse information under limited cognitive resources? What I found was that observers don't evaluate each behavior individually. They infer underlying regularities from the distribution of behaviors (i.e., structural inference), and this process inevitably introduces systematic bias in both how impressions form and how they update over time.</p>
+
+        <p>Another puzzle came from films: why do two completely different scenes cut together often feel narratively seamless and immersive? Think of a man bending a pole, followed immediately by a woman in a different setting being propelled upward. We found that the mind instantly weaves causality between them (even a false one), and that this illusory causal impression delays event boundary detection, making people slow to register a new event.</p>
+
+        <p>Though situated in different domains, both projects share a broader underlying theme: a powerful mind often leaves traces. The biases in impressions and the delays in event segmentation aren't errors; they're the signature of how cognition works.</p>
+
+        <p>After finishing my master's, I spent a year in AI product management, trying to bring cognitive science frameworks into dialogue system design. I kept thinking about the same problems throughout the year—working on R&Rs and turning over new questions on the weekends. I'm returning to academia because I realized that, intellectually, I never really left.</p>
+
+        <p>If any of this resonates, I'd love to hear from you: <a href="mailto:jieyun.li74@gmail.com">jieyun.li74@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Research ───────────────────────────────────── -->
+  <section id="research">
+    <div class="inner">
+      <h2 class="section-title">Research</h2>
+
+      <p class="research-intro">Both projects share a common intuition: the cognitive processes we rely on most to make sense of the world—such as structural inference and causal processing—are efficient and powerful. But that very efficiency inevitably leaves traces. These aren't signs of failure; they show us exactly how the mind work. My work seeks to uncover where those traces appear, and what they reveal.</p>
+
+      <!-- Project 1 -->
+      <div class="research-project">
+        <div class="project-header">
+          <span class="project-num">01</span>
+          <div class="project-title-block">
+            <h3>Illusory-Causal Impression Attenuates the Detection of Event Boundaries</h3>
+            <div class="method-tags">
+              <span class="method-tag">EEG</span>
+              <span class="method-tag">ERP (N2)</span>
+              <span class="method-tag">Time-resolved Decoding</span>
+              <span class="method-tag">Temporal Generalization Analysis</span>
+              <span class="method-tag">Behavioral</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="research-body">The human brain segments the continuous flow of experience into distinct events. Yet, in cinema, the art of continuity editing bridges the transitions between separate shots to build a coherent, immersive experience for us viewers. How the brain bridges these gaps remains poorly understood. We hypothesized that causal impression — even when illusory — acts as a powerful heuristic to attenuate the neural representation of event boundaries, thereby facilitating a smoother transition across events. To test this, we presented participants with action-outcome sequences spliced from different clips to create an illusory causal link across the cut (e.g., a man bending a pole, followed by a woman propelled upward in a different setting). These were compared against matched non-causal controls. Behaviorally, the illusory-causal impression delayed boundary detection. Neurally, it reduced the N2 amplitude at the event transition and increased cross-boundary neural similarity, as if the brain were treating two separate events as one continuous episode. Critically, the greater and more stable the cross-boundary neural separability in posterior brain regions, the faster participants detected the event change. These findings provide a neuroscientific basis for intuitive editing techniques used in filmmaking, demonstrating the brain's Gestalt-like drive to integrate discrete experiences into a coherent whole.</p>
+
+        <div class="research-figure--landscape" style="max-width: 640px; margin: 2rem auto;">
+          <img src="materials/study1.jpg" alt="Study 1 — experimental paradigm and key results" />
+        </div>
+
+        <p class="citation">Li, J., Chen, F., &amp; Hu, Y. (2026). Illusory-Causal Impression Attenuates the Detection of Event Boundaries. <em>The Journal of Neuroscience</em>, 46(23), e1889252026.</p>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="research-project">
+        <div class="project-header">
+          <span class="project-num">02</span>
+          <div class="project-title-block">
+            <h3>A Bayesian Structure Inference Account of Biases in the Formation and Updating of Group Moral Impressions</h3>
+            <div class="method-tags">
+              <span class="method-tag">Computational Modeling</span>
+              <span class="method-tag">CRP / RCRP</span>
+              <span class="method-tag">Bayesian Nonparametric</span>
+              <span class="method-tag">RSA</span>
+              <span class="method-tag">Behavioral</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="research-body">When we observe a group in moral scenarios, we rarely see uniform behavior: most members act in ordinary ways, while a few are rare and deviant. What determines which ones drive the overall impression? Two accounts make opposite predictions. The "Common Is Moral" (CIM) heuristic suggests that frequent behaviors dominate, producing a density bias toward the majority. But if the mind instead infers latent structure by grouping similar behaviors into shared categories, then rare, diverse behaviors carry more weight — because these outliers resist assimilation into existing structures and force the inference of new ones, yielding a sparsity bias. Across behavioral experiments with computational modeling (N &gt; 300), we found evidence for the structural inference account: group moral impressions were skewed toward sparse behaviors, and a latent structure inference model based on the Chinese Restaurant Process (CRP) fit participants' data better than the CIM model. A spatial arrangement task provided direct representational evidence: participants relied more on inferred latent structures than salient visual labels (e.g., gender) to organize group members. Finally, extending the framework to group impression updating via a Recurrent CRP (RCRP), we suggested that formation and updating may be two manifestations of the same Bayesian nonparametric inference process operating in static versus changing environments.</p>
+
+        <!-- Study 2 composite: inline to avoid iframe sizing issues -->
+        <div class="research-figure--landscape">
+          <div class="fig-composite">
+            <img class="fig-base" src="materials/study2.jpg" alt="Study 2 — model and results" />
+            <img class="fig-gif" id="gif-positive"
+                 src="materials/sparse_positve_update.gif"
+                 alt="" />
+            <img class="fig-gif" id="gif-negative"
+                 src="materials/sparse_negative_update.gif"
+                 alt="" />
+          </div>
+        </div>
+
+        <p class="citation">Li, J., Chen, F., &amp; Hu, Y. (2026). A Bayesian Structure Inference Account of Biases in the Formation and Updating of Group Moral Impressions. <em>PsyArXiv</em>. https://doi.org/10.31234/osf.io/bypke_v1</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CV ─────────────────────────────────────────── -->
+  <section id="cv">
+    <div class="inner">
+      <a class="cv-btn" href="materials/cv.pdf" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </section>
+
+  <!-- ── Personal ───────────────────────────────────── -->
+  <section id="personal">
+    <div class="inner">
+      <h2 class="section-title">Personal</h2>
+
+      <div class="personal-photos">
+        <img src="materials/personal1.jpg" alt="" />
+        <img src="materials/personal2.jpg" alt="" />
+      </div>
+
+      <div class="personal-text">
+        <p>I love films. The films that first captivated me were Satoshi Kon's <em>Paprika</em> and Park Chan-wook's <em>Oldboy</em>. They made me realize just how rich a viewing experience could be. I could not help watching the making-of footage for these films and found myself in tears, simply because I recognized what it looks like to pour yourself into something you love, together with others. I've kept looking for that feeling ever since, in films like Ryusuke Hamaguchi's <em>Wheel of Fortune and Fantasy</em> and Pixar's <em>Soul</em>.</p>
+
+        <p>Whenever things get difficult, I tend to walk. Often, it's just walking in circles around places like Green Lake in Kunming, not going anywhere in particular, just moving with the crowd. Thoughts seem to untangle themselves naturally that way. I practice yoga for the same reason: it's about settling into a pose rather than achieving one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────── -->
+  <footer>
+    <p>Jieyun Li &nbsp;·&nbsp; 2026</p>
+  </footer>
+
+  <!-- GIF overlay positioning (mirrors study2_composite.html) -->
+  <style>
+    #gif-positive {
+      left: 0.5%;
+      top: 76%;
+      width: 16.5%;
+    }
+    #gif-negative {
+      left: 17.2%;
+      top: 76%;
+      width: 16.5%;
+    }
+  </style>
+
+</body>
+</html>
